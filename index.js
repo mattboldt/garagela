@@ -5,7 +5,7 @@ const fs = require('fs'),
       Garage = require('./garage');
 
 const PATH = '/dev/ttyACM0',
-      METERS = 10,
+      METERS = 20,
       HOME_LONGITUDE = -96.65558533333333,
       HOME_LATITUDE = 33.223642166666664;
 
