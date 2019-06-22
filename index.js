@@ -13,7 +13,7 @@ const garage = new Garage();
 
 const readStream = fs.createReadStream(PATH);
 readStream.on('data', (chunk) => {
-  let data = chunk.toString().split('\r\n');
+  let data = chunk.toString().split('\n');
 
   for (let line of data) {
     const gps = nmea.parse(line);
