@@ -40,14 +40,15 @@ class Garage {
 }
 
 class Remote {
-  setup() {
-    gpio.setup(GPIO_PIN, gpio.DIR_OUT);
+  setup(fn) {
+    gpio.setup(GPIO_PIN, gpio.DIR_OUT, fn);
   }
 
   on() {
     try {
-      this.setup();
-      gpio.write(GPIO_PIN, 1);
+      this.setup(() => {
+        gpio.write(GPIO_PIN, 1);
+      });
     } catch {
       console.error('could not trigger GPIO on')
     }

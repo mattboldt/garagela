@@ -4,7 +4,7 @@ const fs = require('fs'),
       geolib = require('geolib')
       Garage = require('./garage');
 
-const PATH = '/dev/cu.usbmodem14201',
+const PATH = '/dev/ttyACM0',
       METERS = 10,
       HOME_LONGITUDE = -96.65558533333333,
       HOME_LATITUDE = 33.223642166666664;
