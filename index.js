@@ -20,13 +20,13 @@ readStream.on('data', (chunk) => {
     if (gps.valid) {
       const [longitude, latitude] = gps.loc.geojson.coordinates;
 
-      const isHome = geolib.isPointWithinRadius(
+      const distance = geolib.getDistance(
         { latitude, longitude },
         { latitude: HOME_LATITUDE, longitude: HOME_LONGITUDE },
-        METERS
+        1
       );
 
-      if (isHome) {
+      if (distance && distance > METERS) {
         console.log('Home -- Open triggered');
         garage.open();
       } else {
