@@ -1,7 +1,7 @@
 const fs = require('fs'),
       gpio = require('rpi-gpio'),
       GPIO_PIN = 7,
-      PATH = './open.txt';
+      PATH = '/home/pi/garagela/open.txt';
 
 class Garage {
   constructor() {
