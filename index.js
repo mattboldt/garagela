@@ -26,7 +26,7 @@ readStream.on('data', (chunk) => {
         1
       );
 
-      if (distance && distance > METERS) {
+      if (distance && distance < METERS) {
         console.log('Home -- Open triggered');
         garage.open();
       } else {
